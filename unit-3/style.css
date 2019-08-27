@@ -1,5 +1,5 @@
 body{
-	font-family: 'Itim', cursive, sans-serif;
+	font-family: 'Mali', cursive;
 	font-size: 150%;
 	margin:40px;
 	text-align: center;
@@ -101,6 +101,6 @@ body{
     justify-content: center;
     font-size: 18px;
     text-shadow: 0px 0px 2px #af50208f;
-    color: #2b3e8a;
+    color: #b56be3;
     transition: all 1s;
 }

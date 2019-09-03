@@ -5,11 +5,11 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="https://jabont.com/jayss/jayss.css">
 	<style type="text/css">
-		.fa-star {
-			opacity: .2;
-			cursor: pointer;
-		}
-	</style>
+	.fa-star {
+		opacity: .2;
+		cursor: pointer;
+	}
+</style>
 </head>
 <body class="screen v-middle-flex">
 	<div class="to-center cont-pd">
@@ -66,14 +66,15 @@
 			if (localStorage.nowIndex != undefined) {
 				nowIndex = localStorage.nowIndex;
 			}
+			if (localStorage.fav != undefined) {
+				fav = JSON.parse(localStorage.fav);
+			}
 			renData();
 		}
 
-		function favourite(){
-
-		}
 
 		function renData(){
+			u_fav.style.opacity = fav[nowIndex]+".2";
 			u_profile.src = `https://picsum.photos/id/${user[nowIndex].id}/200/200`;
 			u_userName.innerText = user[nowIndex].username;
 			u_city.innerText = user[nowIndex].address.city;
@@ -98,11 +99,19 @@
 		function clickLeft(){
 			// เลื่อนไปด้านซ้าย เช่นจาก id10 ไป id9 ถ้าเป็น id1 แล้วกดอีกจะกลับไป id1
 			nowIndex--;
+			localStorage.nowIndex = nowIndex;
 			if (nowIndex==-1) {
 				nowIndex = 9;
 			}
 			renData();
 		}
+
+		function favourite(){
+			fav[nowIndex] = 1-fav[nowIndex];
+			u_fav.style.opacity = fav[nowIndex]+".2";
+			localStorage.fav = JSON.stringify(fav);
+		}
+
 	</script>
 </body>
 </html>

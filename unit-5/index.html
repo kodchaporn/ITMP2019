@@ -4,9 +4,23 @@
 	<title>Our User</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="https://jabont.com/jayss/jayss.css">
+	<link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
 	<style type="text/css">
 	body {
-		background-color: black;
+		background-image: url(bg.jpg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		font-family: 'Didact Gothic', sans-serif;
+	}
+	span {
+		font-family: 'Didact Gothic', sans-serif;
+	}
+	#u_name{
+		font-size: 1.5em;
+	}
+	.bold{
+		font-size: 2em;
+		font-weight: bold;
 	}
 	.fa-star {
 		opacity: .2;
@@ -23,19 +37,17 @@
 			<box col="6">
 				<div class="bg-white round shadow padding-l">
 					<div class="t-right">
-						<i class="fas fa-comment cl-blue" id="u_"></i><sp></sp>
-						<i class="fas fa-retweet cl-green" id="u_"></i><sp></sp>
 						<i class="fas fa-heart cl-red" id="u_fav" onclick="favourite()"></i>
 					</div>					
 					<img src="https://picsum.photos/id/2/200/200" class="circle shadow" id="u_profile">
 					<sp></sp>
 					<!-- username -->
-					<h1 class="cl-purple-a4">@<span id="u_userName">_______</span></h1>
+					<p class="cl-pink-a1 bold">@<span id="u_userName">_______</span></p>
 					<!-- city -->
 					<h4><i class="fas fa-map-marker-alt"></i> <span id="u_city">_______</span></h4>
 					<sp></sp>
 					<!-- name -->
-					<h2 id="u_name">_______ _______</h2>
+					<p id="u_name">_______ _______</p>
 					<!-- company -->
 					<p id="u_company">_______</p>
 					<p></p>

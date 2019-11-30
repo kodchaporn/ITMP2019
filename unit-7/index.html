@@ -2,83 +2,162 @@
 <html>
 <head>
 	<style>
-	.yoyo{
-		width: 100px;
-		height: 100px;
-		position: fixed;
-		right: 1em;
-		bottom: 1em;
-		background: blue;
-	}
-	@keyframes blink{
-		from{opacity: 1}
-		to{opacity: 0.3}
-	}
-	.blink{
-		animation: blink .2s infinite;
-	}
-	#tooPla{
-		height: 600px;
-		background: navy;
-		position: relative;
-		overflow: hidden;
-	}
-	.fish{
-		position: absolute;
-		width: 100px;
-		transition: all .2s
-	}
-	.f1{
-		top: 450px;
-		left: 80px;
-	}
-	.f2{
-		top: 700px;
-		left: 480px;
-	}
-	.f3{
-		top: 540px;
-		left: 60px;
-	}
-	.f4{
-		top: 580px;
-		left: 200px;
-	}
-	.f5{
-		top: 400px;
-		left: 400px;
-	}
-</style>
+		body{
+			overflow: hidden;
+		}
+		.yoyo{
+			width: 100px;
+			height: 100px;
+			position: fixed;
+			right: 1em;
+			bottom: 1em;
+		}
+		.welcome{
+			width: 100%;
+			padding: 50px;
+			color: white;
+			font-family: 'Roboto Mono', monospace;
+		}
+		#d1{
+			text-align: center;
+		}
+		#tooPla{
+			height: 600px;
+			background: #135589;
+			position: relative;
+			overflow: hidden;
+		}
+		.fish{
+			position: absolute;
+			width: 100px;
+			transition: all .2s;
+			z-index: 5;
+		}
+		.f1{
+			top: 200px;
+			left: 1200px;
+		}
+		.f2{
+			top: 800px;
+			left: 1200px;
+			z-index: 3;
+		}
+		.f3{
+			top: 800px;
+			left: 1200px;
+		}
+		.f4{
+			top: 800px;
+			left: 1200px;
+		}
+		.f5{
+			top: 800px;
+			left: 1200px;
+		}
+		.f11{
+			top: 360px;
+			left: -80px;
+			transform: scaleX(-1);
+		}
+		.f12{
+			top: 450px;
+			left: 100px;
+			z-index: 3;
+			transform: scaleX(-1);
+		}
+		.f13{
+			top: 400px;
+			left: 100px;
+			transform: scaleX(-1);
+		}
+		.f14{
+			top: -100px;
+			left: -140px;
+			transform: scaleX(-1);
+		}
+		.f15{
+			top: 320px;
+			left: 100px;
+			transform: scaleX(-1);
+		}
+		.diver{
+			position: absolute;
+			width: 500px;
+			top: -340px;
+			left: 0px;
+			z-index: 2;
+		}
+		.bubble{
+			background: white;
+			width: 50px;
+			height: 50px;
+			border-radius: 100px;
+			position: absolute;
+			left: 50px;
+			top: 1200px;
+			animation: bubble 3s infinite;
+			z-index: 6;
+			opacity: 0.5;
+		}
+		@keyframes bubble {
+			from {}
+			to {top: -190px;}
+		}
+		@keyframes swim {
+			from {left: -100px;top: 500px;}
+			to {left: 2000px; top: 50px;}
+		}
+		.f-1{
+			transform: scaleX(-1);
+			animation: swim 10s infinite;
+		}
+		.f-2{
+			animation: swim 10s infinite reverse;
+		}
+	</style>
 	<title>Hello Ocean World</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="https://jabont.com/jayss/jayss.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
 
-	<div id="d1" style="height: 400px;width: 100%;background: pink"></div>
-	<div id="d2" style="height: 400px;width: 100%;background: orchid"></div>
-	<div id="d3" style="height: 400px;width: 100%;background: pink"></div>
-	<div id="d4" style="height: 400px;width: 100%;background: orchid"></div>
-	<div id="d5" style="height: 400px;width: 100%;background: pink"></div>
-	<div id="d6" style="height: 400px;width: 100%;background: orchid"></div>
-	<div id="d7" style="height: 400px;width: 100%;background: pink"></div>
-	<div id="d8" style="height: 400px;width: 100%;background: orchid"></div>
-		<div id="tooPla">
-		<img src="fish1.png" class="fish f1" id="f1">
-		<img src="fish1.png" class="fish f2" id="f2">
-		<img src="fish1.png" class="fish f3" id="f3">
-		<img src="fish1.png" class="fish f4" id="f4">
-		<img src="fish1.png" class="fish f5" id="f5">
+	<div id="d1" style="height: 400px;width: 100%;background: #135589">
+		<div class="welcome">
+			<h1 style="margin: auto;">Welcome to My Ocean World</h1>
+			<p style="margin: auto;">Please Scroll down</p>
+		</div>
+		<img src="fish1.png" class="fish f-1">
+		<img src="fish8.png" class="fish f-2">
+		<div class="bubble"></div>
+		<div class="bubble" style="left: 260px;top: 1000px;width: 30px;height: 30px;"></div>
+		<div class="bubble" style="left: 600px;top: 1500px;"></div>
+		<div class="bubble" style="left: 430px;top: 900px;width: 60px;height: 60px;"></div>
+		<div class="bubble" style="left: 1000px;top: 1100px;"></div>
+		<div class="bubble" style="left: 1350px;top: 950px;width: 30px;height: 30px;"></div>
+		<div class="bubble" style="left: 1500px;top: 1000px;"></div>
+		
+		<img src="diver.png" class="diver" id="di1">
 	</div>
-	<div id="d9" style="height: 400px;width: 100%;background: pink"></div>
-	<div id="d10" style="height: 400px;width: 100%;background: orchid"></div>
-	<div id="d11" style="height: 400px;width: 100%;background: pink"></div>
-	<div id="d12" style="height: 400px;width: 100%;background: orchid"></div>
-	<div id="d13" style="height: 400px;width: 100%;background: pink"></div>
-	<div id="d14" style="height: 400px;width: 100%;background: orchid"></div>
-	<div id="d15" style="height: 400px;width: 100%;background: pink"></div>
-	<div id="d16" style="height: 400px;width: 100%;background: orchid"></div>
-	<div id="yoyo" class="yoyo"></div>
+	<div id="d2" style="height: 400px;width: 100%;background: #135589;position: relative;">
+		<img src="fish6.png" class="fish f11" id="f11">
+		<img src="fish8.png" class="fish f12" id="f12">
+		<img src="fish3.png" class="fish f13" id="f13">
+		<img src="fish7.png" class="fish f14" id="f14">
+		<img src="fish5.png" class="fish f15" id="f15">
+	</div>
+	<div id="tooPla">
+		<img src="fish6.png" class="fish f1" id="f1">
+		<img src="fish8.png" class="fish f2" id="f2">
+		<img src="fish3.png" class="fish f3" id="f3">
+		<img src="fish7.png" class="fish f4" id="f4">
+		<img src="fish5.png" class="fish f5" id="f5">
+	</div>
+	<div id="d3" style="height: 100px;width: 100%;background: #ffca97"></div>
+
+	<div id="yoyo" class="yoyo">
+		<img src="starfish.png">
+	</div>
 
 
 
@@ -88,30 +167,57 @@
 			yoyo.style.transform = `rotate(${r}deg)`;
 		}
 		window.addEventListener("scroll", rotateNongYoyo);
-		function blinkThat(){
-			let ey = d3.offsetTop;
-			let ebottom = ey+d3.offsetHeight; 
-			let nowTop = window.pageYOffset;
-			let nowBottom = nowTop+window.innerHeight;
-			if (nowBottom>ey+300 && nowTop<ebottom-100) {
-				d3.classList.add('blink');
-			}
-			else{
-				d3.classList.remove('blink');
-			}
-		}
-		window.addEventListener("scroll", blinkThat);
+		// function blinkThat(){
+		// 	let ey = d3.offsetTop;
+		// 	let ebottom = ey+d3.offsetHeight; 
+		// 	let nowTop = window.pageYOffset;
+		// 	let nowBottom = nowTop+window.innerHeight;
+		// 	if (nowBottom>ey+300 && nowTop<ebottom-100) {
+		// 		d3.classList.add('blink');
+		// 	}
+		// 	else{
+		// 		d3.classList.remove('blink');
+		// 	}
+		// }
+		// window.addEventListener("scroll", blinkThat);
 
 		function plaToo(){
 			let y = window.pageYOffset-tooPla.offsetTop+tooPla.offsetHeight;
 			console.log(y);
-			f1.style.marginTop = `-${y}px`;
-			f2.style.marginTop = `-${y*3}px`;
-			f3.style.marginTop = `-${y*2}px`;
-			f4.style.marginTop = `-${y*1.5}px`;
-			f5.style.marginTop = `-${y*0.7}px`;
+			f1.style.marginTop = `-${y*0.2}px`;
+			f2.style.marginTop = `-${y*2}px`;
+			f3.style.marginTop = `-${y*1.3}px`;
+			f4.style.marginTop = `-${y*0.5}px`;
+			f5.style.marginTop = `-${y*1.2}px`;
+			f1.style.marginLeft = `-${y*0.4}px`;
+			f2.style.marginLeft = `-${y*2}px`;
+			f3.style.marginLeft = `-${y*3}px`;
+			f4.style.marginLeft = `-${y*0.7}px`;
+			f5.style.marginLeft = `-${y*1.5}px`;
 		}
 		window.addEventListener("scroll", plaToo);
+
+		function diver(){
+			let z = window.pageYOffset-tooPla.offsetTop+tooPla.offsetHeight;
+			di1.style.top = `${z*1.7}px`;
+			di1.style.left = `${z*1.5}px`;
+		}
+		window.addEventListener("scroll", diver);
+
+		function fishSwim(){
+			let y = window.pageYOffset-tooPla.offsetTop+tooPla.offsetHeight;
+			f11.style.top = `-${y*0.3}px`;
+			f12.style.top = `${y*1.4}px`;
+			f13.style.top = `${y*1.3}px`;
+			f14.style.top = `${y*0.5}px`;
+			f15.style.top = `-${y*1.2}px`;
+			f11.style.left = `${y*0.5}px`;
+			f12.style.left = `${y*2}px`;
+			f13.style.left = `${y*3}px`;
+			f14.style.left = `${y*0.7}px`;
+			f15.style.left = `${y*1.5}px`;
+		}
+		window.addEventListener("scroll", fishSwim);
 	</script>
 </body>
 </html>
